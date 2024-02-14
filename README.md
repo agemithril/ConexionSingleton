@@ -6,11 +6,11 @@ Este proyecto proporciona una implementación de la clase `ConexionSingleton`, q
 ## Uso
 
 1. Incluye la clase en tu proyecto:
- include("ruta-de-/connection.php");
+ `include("ruta-de-/connection.php");`
 2.Obtén una instancia de la conexión: 
- $conexion = ConexionSingleton::obtenerInstancia();
+ `$conexion = ConexionSingleton::obtenerInstancia();`
 3.Obtén la conexión a la base de datos:
- $con = $conexion->obtenerConexion();
+`$con = $conexion->obtenerConexion();`
 
 4. ¡Importante! No olvides cerrar la conexión después de su uso para liberar recursos y mantener una gestión eficiente de la base de datos.
     mysqli_close($con);
