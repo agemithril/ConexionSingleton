@@ -13,22 +13,22 @@ Este proyecto proporciona una implementación de la clase `ConexionSingleton`, q
 `$con = $conexion->obtenerConexion();`
 
 4. ¡Importante! No olvides cerrar la conexión después de su uso para liberar recursos y mantener una gestión eficiente de la base de datos.
-    mysqli_close($con);
+    `mysqli_close($con);`
 
 ¡Listo! Ahora puedes utilizar $con para realizar consultas a la base de datos.
 
 5. También puedes implementar en el connection.php la función:
 
-public function cerrarConexion()
+`public function cerrarConexion()
     {
         if ($this->conexion) {
             mysqli_close($this->conexion);
             $this->conexion = null;
         }
-    }
+    }`
 
 6. Para terminarla de esta forma:
-$conexion->cerrarConexion();
+`$conexion->cerrarConexion();`
 
 Singleton: Se utiliza el patrón de diseño Singleton para garantizar que solo haya una instancia de la clase ConexionSingleton en toda la aplicación, evitando así la creación de múltiples conexiones innecesarias a la base de datos.
 
